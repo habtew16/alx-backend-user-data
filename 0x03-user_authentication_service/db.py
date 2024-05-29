@@ -79,7 +79,14 @@ class DB:
         return result
 
     def update_user(self, user_id: int, **kwargs) -> None:
-        """Updates a user based on a given id.
+        """Update a user's attributes.
+
+        Args:
+            user_id (int): The ID of the user to update.
+            **kwargs: Arbitrary keyword arguments representing user attributes.
+
+        Raises:
+            ValueError: If an argument that does not correspond to a user attribute is passed.
         """
         user = self.find_user_by(id=user_id)
         if user is None:
