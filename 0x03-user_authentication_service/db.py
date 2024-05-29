@@ -52,7 +52,17 @@ class DB:
         return new_user
 
     def find_user_by(self, **kwargs) -> User:
-        """Finds a user based on a set of filters.
+        """Find a user by given query arguments.
+
+        Args:
+            **kwargs: Arbitrary keyword arguments to filter the query.
+
+        Returns:
+            User: The first user found matching the query.
+
+        Raises:
+            NoResultFound: If no user is found matching the query.
+            InvalidRequestError: If wrong query arguments are passed.
         """
         fields, values = [], []
         for key, value in kwargs.items():
