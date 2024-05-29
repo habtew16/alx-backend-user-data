@@ -9,6 +9,7 @@ from sqlalchemy.orm import sessionmaker
 
 Base = declarative_base()
 
+
 class User(Base):
     """
     SQLAlchemy User model for the users table.
