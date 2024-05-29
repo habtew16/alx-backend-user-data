@@ -86,7 +86,7 @@ class DB:
             **kwargs: Arbitrary keyword arguments representing user attributes.
 
         Raises:
-            ValueError: If an argument that does not correspond to a user attribute is passed.
+            ValueError: does not correspond to a user attribute is passed.
         """
         user = self.find_user_by(id=user_id)
         if user is None:
